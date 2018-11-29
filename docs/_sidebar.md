@@ -11,3 +11,16 @@
 - MISC
 
   - [Which integration option should I use?](misc/which-integration-option-should-i-use.md)
+  - [Do I have to use the locize CDN or can i host / bundle the translations directly?](misc/do-i-have-to-use-the-locize-cdn-or-can-i-host-bundle-the-translations-directly.md)
+
+
+
+
+
+
+
+- **Links**
+- [![Github](https://icongram.jgog.in/simple/github.svg?color=808080&size=16)Github](https://github.com/locize)
+- [![Twitter](https://icongram.jgog.in/simple/twitter.svg?colored&size=16)Twitter](http://twitter.com/locize)
+- [![Facebook](https://icongram.jgog.in/simple/facebook.svg?colored&size=16)Facebook](https://www.facebook.com/Locize-1672640746084189/)
+- [![Youtube](https://icongram.jgog.in/simple/youtube.svg?colored&size=16)Youtube](https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA)
