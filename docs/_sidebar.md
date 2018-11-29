@@ -28,11 +28,6 @@
   - [Convince Your Boss Letter](misc/convince-your-boss-letter.md)
 
 
-- LOCIZIFY TIPS AND TRICKS
-
-  - [Can I have more than one translation files (namespaces)?](locizify-tips-and-tricks/can-i-have-more-than-one-translation-files-namespaces.md)
-
-
 ---
 - [![Github](https://icongram.jgog.in/simple/github.svg?color=808080&size=16)Github](https://github.com/locize)
 - [![Twitter](https://icongram.jgog.in/simple/twitter.svg?colored&size=16)Twitter](http://twitter.com/locize)
