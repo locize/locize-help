@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "docsify serve ./docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "docsify-cli": "4.3.0"
+  }
+}
