@@ -12,16 +12,11 @@ The items are:
 The price per unit go down the higher your numbers are. For details check out the pricing page: [https://locize.com/pricing.html](https://locize.com/pricing.html) (scroll down to the details).
 
 
-**An example:**
-
-5’000 words * 4 languages -> **20’000 words** * 0.004 -> $50
-
-1000 words changed -> (let’s assume 10 words per key) -> **100 modifications** * 0.04 -> $4
-
-**40000 downloads** * $0.0001 -> $4
-
-$5 base fee
-
+**An example:**</br>
+5’000 words * 4 languages -> **20’000 words** * 0.004 -> $50</br>
+1000 words changed -> (let’s assume 10 words per key) -> **100 modifications** * 0.04 -> $4</br>
+**40000 downloads** * $0.0001 -> $4</br>
+$5 base fee</br>
 => Would mean you will be charged around $63 for you project for that month.
 
 
