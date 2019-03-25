@@ -7,7 +7,7 @@
   - [How to add a new version?](using-the-application/how-to-add-a-new-version.md)
   - [How to import from a file?](using-the-application/how-to-import-from-a-file.md)
   - [How to subscribe?](using-the-application/how-to-subscribe.md)
-
+  - [How to change reference language?](using-the-application/how-to-change-reference-language.md)
 
 - GENERAL QUESTIONS
 
