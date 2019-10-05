@@ -8,6 +8,8 @@
   - [How to import from a file?](using-the-application/how-to-import-from-a-file.md)
   - [How to subscribe?](using-the-application/how-to-subscribe.md)
   - [How to change reference language?](using-the-application/how-to-change-reference-language.md)
+  - [What is the difference of the buttons between the segments in the editor?](using-the-application/what-is-the-difference-of-the-buttons-between-the-segments-in-the-editor.md)
+  - [How do the buttons in the editor work?](using-the-application/how-do-the-buttons-in-the-editor-work.md)
 
 - GENERAL QUESTIONS
 
@@ -29,7 +31,7 @@
 
 
 ---
-- [![Github](https://icongram.jgog.in/simple/github.svg?color=808080&size=16)Github](https://github.com/locize)
-- [![Twitter](https://icongram.jgog.in/simple/twitter.svg?colored&size=16)Twitter](http://twitter.com/locize)
-- [![Facebook](https://icongram.jgog.in/simple/facebook.svg?colored&size=16)Facebook](https://www.facebook.com/Locize-1672640746084189/)
-- [![Youtube](https://icongram.jgog.in/simple/youtube.svg?colored&size=16)Youtube](https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA)
+- [![Github](https://icongr.am/simple/github.svg?color=808080&size=16)Github](https://github.com/locize)
+- [![Twitter](https://icongr.am/simple/twitter.svg?colored&size=16)Twitter](http://twitter.com/locize)
+- [![Facebook](https://icongr.am/simple/facebook.svg?colored&size=16)Facebook](https://www.facebook.com/Locize-1672640746084189/)
+- [![Youtube](https://icongr.am/simple/youtube.svg?colored&size=16)Youtube](https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA)
