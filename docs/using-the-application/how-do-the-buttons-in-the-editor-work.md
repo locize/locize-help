@@ -19,3 +19,8 @@ Now you can see what actually has changed.
 *This is the default view when importing a file directly in the editor.*
 ![](editor_buttons_3.png)
 
+
+<h2>And what is <img src="https://icongr.am/material/backup-restore.svg?color=2196f3" style="vertical-align: middle;"/> doing?</h2>
+
+This button will reset the segment to its old value.
+This could be helpful when you're importing a file and want to confirm everything but a few segments.
