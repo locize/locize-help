@@ -13,11 +13,11 @@ The price per unit go down the higher your numbers are. For details check out th
 
 
 **An example:**</br>
-5’000 words * 4 languages -> **20’000 words** * 0.004 -> $50</br>
+5’000 words * 4 languages -> **20’000 words** * 0.004 -> $80</br>
 1000 words changed -> (let’s assume 10 words per key) -> **100 modifications** * 0.04 -> $4</br>
 **40000 downloads** * $0.0001 -> $4</br>
 $5 base fee</br>
-=> Would mean you will be charged around $63 for you project for that month.
+=> Would mean you will be charged around $93 for you project for that month.
 
 
 We know all those cost units can be confusing - but this is the only way to more or less get a fair pricing for all the different projects out there.
