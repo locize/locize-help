@@ -21,6 +21,7 @@
   - [Is there any visibility on project’s level of completion that shows how translators are progressing?](general-questions/is-there-any-visibility-on-projects-level-of-completion-that-shows-how-translators-are-progressing-o.md)
   - [Why do I get "The passed json is nested too deeply." when consuming the API?](general-questions/why-do-i-get-the-passed-json-is-nested-too-deeply.-when-consuming-the-api.md)
   - [Why is my namespace suddenly a flat json?](general-questions/why-is-my-namespace-suddenly-a-flat-json.md)
+  - [Why does my namespace contain an array with a lot of null items?](general-questions/why-does-my-namespace-contain-array-with-null-items.md)
   - [Why is the pricing so complicated?](general-questions/why-is-the-pricing-so-complicated.md)
 
 
