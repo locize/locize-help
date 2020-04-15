@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="//unpkg.com/docsify-themeable/dist/css/theme-simple.css">
+    <style>
+      .pricing-slider {
+        width: 400px;
+        margin-left: 10px;
+      }
+
+      .pricing-fromto {
+        width: 80px;
+        margin: 0 10px;
+      }
+
+      .pricing-row {
+        display: flex;
+        align-items: center;
+      }
+
+      .pricing-subResult {
+        display: inline-block;
+        margin-left: 30px;
+      }
+
+      .pricing-label {
+        display: inline-block;
+        width: 150px;
+        margin-right: 10px;
+      }
+
+      .pricing-results {
+        margin-top: 40px;
+      }
+      .pricing-resultTotal {
+        font-weight: 700;
+      }
+      .pricing-sets {
+        margin: 0 0 40px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pricing-table">
+      <div id="sets" class="pricing-sets"></div>
+      <div>
+        <div class="pricing-row">
+          <span class="pricing-label">words</span>
+          <span translated>0</span>
+          <input translated id="words" type="range" class="pricing-slider" min="0" max="100000" value="2000" step="1" />
+          <span class="pricing-fromto" translated>100000</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-label">downloads</span>
+          <span translated>0</span>
+          <input translated id="downloads" type="range" class="pricing-slider" min="0" max="2500000" value="10000" step="1" />
+          <span class="pricing-fromto" translated>2500000</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-label">modifications</span>
+          <span translated>0</span>
+          <input translated id="modifications" type="range" class="pricing-slider" min="0" max="5000" value="100" step="1" />
+          <span class="pricing-fromto" translated>20000</span>
+        </div>
+      </div>
+      <div class="pricing-results">
+        <div>
+          <span class="pricing-label">subscription</span>
+          <span id="resultSubscription" translated></span>
+        </div>
+        <div>
+          <span class="pricing-label">words</span>
+          <span id="resultWords" translated></span>
+        </div>
+        <div>
+          <span class="pricing-label">downloads</span>
+          <span id="resultDownloads" translated></span>
+        </div>
+        <div>
+          <span class="pricing-label">modifications</span>
+          <span id="resultModifications" translated></span>
+        </div>
+        <div>
+          <span class="pricing-label">
+            <strong>total</strong>
+          </span>
+          <span id="resultTotal" class="pricing-resultTotal" translated></span>
+          <div>
+            <small style="font-size: 12px;">prices excl. VAT | billed on a recurring monthly basis</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var prices = {
+        subscription: 5,
+        words: [
+          { next: 10000, price: 0.004 },
+          { next: 20000, price: 0.003 },
+          { next: 20000, price: 0.002 },
+          { next: 20000, price: 0.001 },
+          { price: 0.0005 }
+        ],
+        downloads: [
+          { next: 500000, price: 0.0001 },
+          { next: 1000000, price: 0.000075 },
+          { price: 0.00005 }
+        ],
+        modifications: [
+          { next: 1000, price: 0.04 },
+          { next: 2000, price: 0.03 },
+          { next: 2000, price: 0.02 },
+          { next: 2000, price: 0.01 },
+          { price: 0.005 }
+        ],
+        auditEntries: [
+          { price: 0.02 }
+        ]
+      }
+
+      var setData = [
+        { name: 'small', words: 2000, downloads: 10000, modifications: 100 },
+        { name: 'medium', words: 10000, downloads: 50000, modifications: 200 },
+        { name: 'large', words: 37000, downloads: 100000, modifications: 500 },
+        // { name: 'xlarge', words: 75000, downloads: 500000, modifications: 750 },
+      ]
+
+      // elements
+      var selWord = document.getElementById('words');
+      var resWord = document.getElementById('resultWords');
+      var selDownload = document.getElementById('downloads');
+      var resDownload = document.getElementById('resultDownloads');
+      var selModification = document.getElementById('modifications');
+      var resModification = document.getElementById('resultModifications');
+      var resSubscription = document.getElementById('resultSubscription');
+      var resTotal = document.getElementById('resultTotal');
+      var sets = document.getElementById('sets');
+
+      // buttons with presets
+      function setValues(data) {
+        selWord.value = data.words;
+        selDownload.value = data.downloads;
+        selModification.value = data.modifications;
+
+        render(calculate());
+      };
+
+      setData.forEach(function(d) {
+        var btn = document.createElement('button');
+        btn.innerHTML = d.name;
+        btn.setAttribute('class', 'btn btn-signup');
+        btn.setAttribute('style', 'margin-right: 20px');
+        btn.addEventListener('click', function(e) {
+          setValues(d);
+        });
+        sets.appendChild(btn);
+      });
+
+
+      function calcOne(name, amount) {
+        var ret = 0;
+        var rest = amount;
+        var itemPrices = prices[name];
+
+        itemPrices.forEach(function(p) {
+          if (rest <= 0) return;
+
+          var newRest = p.next ? rest - p.next : -1;
+          var charge = newRest >= 0 ? p.next : rest;
+          ret = ret + (charge * p.price);
+
+          rest = newRest;
+        });
+
+        return ret;
+      }
+
+      function calculate() {
+        var costWords = calcOne('words', selWord.value);
+        var costDownloads = calcOne('downloads', selDownload.value);
+        var costModifications = calcOne('modifications', selModification.value);
+
+        return {
+          words: selWord.value,
+          costWords: costWords,
+          downloads: selDownload.value,
+          costDownloads: costDownloads,
+          modifications: selModification.value,
+          costModifications: costModifications
+        }
+      }
+
+      function render(costs) {
+        resWord.innerHTML = costs.costWords.toFixed(2) + '$ (' + costs.words + ')';
+        resDownload.innerHTML = costs.costDownloads.toFixed(2) + '$ (' + costs.downloads + ')';
+        resModification.innerHTML = costs.costModifications.toFixed(2) + '$ (' + costs.modifications + ')';
+        resSubscription.innerHTML = prices.subscription.toFixed(2) + '$ (' + 1 + ')';
+        resTotal.innerHTML = (costs.costModifications + costs.costWords + costs.costDownloads + prices.subscription).toFixed(2) + '$';
+      }
+
+      selWord.addEventListener('change', function(e) { render(calculate()); });
+      selDownload.addEventListener('change', function(e) { render(calculate()); });
+      selModification.addEventListener('change', function(e) { render(calculate()); });
+
+      render(calculate());
+  
+    </script>
+  </body>
+</html>

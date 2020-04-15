@@ -25,3 +25,9 @@ Overall you will see costs below competitors while providing a lot more features
 There is a 14d free trial you can start using without any obligations -> on the billing page you will have an overview over the costs of the current month.
 
 *A little advice: be aware that modifications and downloads are set to zero on subscription.*
+
+</br>
+
+**A simple price calculator:**
+
+[calculator](../calculator.html ':include :type=iframe width=100% height=400px')
