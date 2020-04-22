@@ -9,6 +9,11 @@
         margin-left: 10px;
       }
 
+      .pricing-input {
+        width: 80px;
+        margin-left: 10px;
+      }
+
       .pricing-fromto {
         width: 80px;
         margin: 0 10px;
@@ -48,20 +53,23 @@
         <div class="pricing-row">
           <span class="pricing-label">words</span>
           <span translated>0</span>
-          <input translated id="words" type="range" class="pricing-slider" min="0" max="100000" value="2000" step="1" />
+          <input translated id="words" type="range" class="pricing-slider" min="0" max="100000" value="9000" step="1" />
           <span class="pricing-fromto" translated>100000</span>
-        </div>
-        <div class="pricing-row">
-          <span class="pricing-label">downloads</span>
-          <span translated>0</span>
-          <input translated id="downloads" type="range" class="pricing-slider" min="0" max="5000000" value="10000" step="1" />
-          <span class="pricing-fromto" translated>5000000</span>
+          <input class="pricing-input" id="words_input" type="number" />
         </div>
         <div class="pricing-row">
           <span class="pricing-label">modifications</span>
           <span translated>0</span>
-          <input translated id="modifications" type="range" class="pricing-slider" min="0" max="20000" value="100" step="1" />
+          <input translated id="modifications" type="range" class="pricing-slider" min="0" max="20000" value="400" step="1" />
           <span class="pricing-fromto" translated>20000</span>
+          <input class="pricing-input" id="modifications_input" type="number" />
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-label">downloads</span>
+          <span translated>0</span>
+          <input translated id="downloads" type="range" class="pricing-slider" min="0" max="5000000" value="40000" step="1" />
+          <span class="pricing-fromto" translated>5000000</span>
+          <input class="pricing-input" id="downloads_input" type="number" />
         </div>
       </div>
       <div class="pricing-results">
@@ -74,12 +82,12 @@
           <span id="resultWords" translated></span>
         </div>
         <div>
-          <span class="pricing-label">downloads</span>
-          <span id="resultDownloads" translated></span>
-        </div>
-        <div>
           <span class="pricing-label">modifications</span>
           <span id="resultModifications" translated></span>
+        </div>
+        <div>
+          <span class="pricing-label">downloads</span>
+          <span id="resultDownloads" translated></span>
         </div>
         <div>
           <span class="pricing-label">
@@ -129,10 +137,13 @@
       // elements
       var selWord = document.getElementById('words');
       var resWord = document.getElementById('resultWords');
+      var wordsInput = document.getElementById('words_input');
       var selDownload = document.getElementById('downloads');
       var resDownload = document.getElementById('resultDownloads');
+      var downloadsInput = document.getElementById('downloads_input');
       var selModification = document.getElementById('modifications');
       var resModification = document.getElementById('resultModifications');
+      var modificationsInput = document.getElementById('modifications_input');
       var resSubscription = document.getElementById('resultSubscription');
       var resTotal = document.getElementById('resultTotal');
       var sets = document.getElementById('sets');
@@ -177,6 +188,9 @@
       }
 
       function calculate() {
+        if (selWord.value !== wordsInput.value) wordsInput.value = selWord.value
+        if (selDownload.value !== downloadsInput.value) downloadsInput.value = selDownload.value
+        if (selModification.value !== modificationsInput.value) modificationsInput.value = selModification.value
         var costWords = calcOne('words', selWord.value);
         var costDownloads = calcOne('downloads', selDownload.value);
         var costModifications = calcOne('modifications', selModification.value);
@@ -202,6 +216,9 @@
       selWord.addEventListener('change', function(e) { render(calculate()); });
       selDownload.addEventListener('change', function(e) { render(calculate()); });
       selModification.addEventListener('change', function(e) { render(calculate()); });
+      wordsInput.addEventListener('change', function(e) { selWord.value = wordsInput.value; render(calculate()); });
+      downloadsInput.addEventListener('change', function(e) { selDownload.value = downloadsInput.value; render(calculate()); });
+      modificationsInput.addEventListener('change', function(e) { selModification.value = modificationsInput.value; render(calculate()); });
 
       render(calculate());
   
