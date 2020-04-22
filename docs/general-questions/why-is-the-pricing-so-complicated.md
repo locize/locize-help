@@ -18,7 +18,7 @@ The price per unit go down the higher your numbers are. For details check out th
 **40000 downloads** * $0.0001 -> $4</br>
 $5 base fee</br>
 => Would mean you will be charged around **$85** for you project for that month.</br>
-=> For the next month, assuming you don’t change any text (no modifications) and you will not generate any downloads, you will be billed for 20’000 words and the base fee, around **$65**.
+=> For the next month, assuming you don’t change any text (no modifications) and you will not generate any downloads, you will be charged for your esisting 20’000 words and the base fee, around **$65**.
 
 
 We know all those cost units can be confusing - but this is the only way to more or less get a fair pricing for all the different projects out there.
