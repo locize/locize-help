@@ -25,6 +25,6 @@ If you now add a key that does contain a space, comma or question mark `/ |,|\?/
 
 locize automatically transforms to this flat format if it detects that keys use natural language. This is the default behaviour.
 
-*If you know that you always use flat format, you can select this in the project settings.*
+*If you know that you always use flat format, you can select this in the developer settings of your project.*
 
 ![](publish_flat.png)

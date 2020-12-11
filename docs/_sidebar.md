@@ -1,4 +1,4 @@
-- USING THE APPLICATION
+<!-- - USING THE APPLICATION
 
   - [Where to start?](using-the-application/where-to-start.md)
   - [How to add a new namespace?](using-the-application/how-to-add-a-new-namespace.md)
@@ -9,7 +9,7 @@
   - [How to subscribe?](using-the-application/how-to-subscribe.md)
   - [How to change reference language?](using-the-application/how-to-change-reference-language.md)
   - [What is the difference of the buttons between the segments in the editor?](using-the-application/what-is-the-difference-of-the-buttons-between-the-segments-in-the-editor.md)
-  - [How do the buttons in the editor work?](using-the-application/how-do-the-buttons-in-the-editor-work.md)
+  - [How do the buttons in the editor work?](using-the-application/how-do-the-buttons-in-the-editor-work.md) -->
 
 - GENERAL QUESTIONS
 
