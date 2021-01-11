@@ -7,7 +7,6 @@ The items are:
 - **Words** -> The costs for every word (all languages) stored in the version with most words (normally latest)
 - **Modifications** -> Any translation (key/value) added, updated or deleted via UI or API (also for empty values)
 - **Downloads** -> Every translation file (not word) that gets downloaded from our CDN (if you’re using that feature)
-- **Audit entries** -> For every audit entry written if that service is enabled (costs depend on storage duration of the audit logs)
 
 The price per unit go down the higher your numbers are. For details check out the pricing page: [https://locize.com/pricing.html](https://locize.com/pricing.html) (scroll down to the details).
 
